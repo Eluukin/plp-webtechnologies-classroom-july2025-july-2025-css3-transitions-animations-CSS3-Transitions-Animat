@@ -1,0 +1,48 @@
+/* --- Global Styles --- */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+/* --- Part 1: CSS Hover Animation --- */
+button#hoverBtn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+button#hoverBtn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.2);
+}
+
+/* --- Part 1 & 3: Animated Box --- */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin: 20px auto;
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* CSS animation on page load */
+}
+
+/* Slide animation triggered by JS */
+@keyframes slideIn {
+  from { transform: translateX(-300px); }
+  to { transform: translateX(0); }
+}
+
+.slide {
+  animation: slideIn 1s forwards;
+}
+
+/* Fade-in animation on page load */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
